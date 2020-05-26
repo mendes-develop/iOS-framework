@@ -23,6 +23,7 @@
 		D7CECC44247C694500728639 /* Message+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CECC40247C694500728639 /* Message+CoreDataProperties.swift */; };
 		D7CECC45247C694500728639 /* MatchUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CECC41247C694500728639 /* MatchUser+CoreDataClass.swift */; };
 		D7CECC46247C694500728639 /* MatchUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CECC42247C694500728639 /* MatchUser+CoreDataProperties.swift */; };
+		D7CECC6B247C7FA100728639 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CECC6A247C7FA100728639 /* CoreDataManager.swift */; };
 		D7D249EF2476056B00807B8C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D249EE2476056B00807B8C /* Extension.swift */; };
 		D7D24A11247784F100807B8C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D24A10247784F100807B8C /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		D7CECC40247C694500728639 /* Message+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D7CECC41247C694500728639 /* MatchUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchUser+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D7CECC42247C694500728639 /* MatchUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D7CECC6A247C7FA100728639 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D7D249EE2476056B00807B8C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		D7D24A10247784F100807B8C /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +79,7 @@
 				D7CECC41247C694500728639 /* MatchUser+CoreDataClass.swift */,
 				D7CECC42247C694500728639 /* MatchUser+CoreDataProperties.swift */,
 				D73AA44D247C567C00734E90 /* Model.xcdatamodeld */,
+				D7CECC6A247C7FA100728639 /* CoreDataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				D7B4BB952478CF69004EE92D /* SignupScreen.swift in Sources */,
 				D74B5E8E2475F8B80015F9D9 /* LoginViewController.swift in Sources */,
 				D796FD3D2468D41B001E0C31 /* AppDelegate.swift in Sources */,
+				D7CECC6B247C7FA100728639 /* CoreDataManager.swift in Sources */,
 				D7CECC46247C694500728639 /* MatchUser+CoreDataProperties.swift in Sources */,
 				D7CECC44247C694500728639 /* Message+CoreDataProperties.swift in Sources */,
 				D7D24A11247784F100807B8C /* SignupViewController.swift in Sources */,

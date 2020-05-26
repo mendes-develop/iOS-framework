@@ -7,17 +7,7 @@
 //
 
 import UIKit
-
-//class MatchUser: NSObject {
-//    var name: String?
-//    var profileImage: String?
-//}
-//
-//class Message: NSObject {
-//    var user: MatchUser?
-//    var date: NSDate?
-//    var text: String?
-//}
+import CoreData
 
 class MessageViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
@@ -60,24 +50,15 @@ class MessageViewController: UICollectionViewController, UICollectionViewDelegat
 
 extension MessageViewController {
     func setUpData(){
-        let user1 = MatchUser()
-        user1.name = "Alex Mendes"
-        user1.profileImage = "alex_profile"
         
-        let message1 = Message()
+//        guard let user1 = CoreDataManager.shared.createMatchUser(name: "Alex Mendes", profileImage: "alex_profile") else { return }
+//        guard CoreDataManager.shared.createMessage(text: "What's my man. How are you doing today? Isn't a beutiful day today?", date: Date(), user: user1) != nil else { return }
         
-//        message1.text = "What's my man. How are you doing today? Isn't a beutiful day today?"
-//        message1.date = NSDate() as Date
-        
-        let user2 = MatchUser()
-        user2.name = "Alex Mendes"
-        user2.profileImage = "alex_profile"
-        
-        let message2 = Message()
+        loadData()
 
-        message2.text = "What's my man. How are you doing today? Isn't a beutiful day today?"
-        message2.date = NSDate() as Date
-        
-        messagesPreview = [message1, message2]
+    }
+    func loadData(){
+        guard let messages = CoreDataManager.shared.fetchMessages() else { return }
+        messagesPreview = messages
     }
 }

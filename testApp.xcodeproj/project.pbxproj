@@ -24,6 +24,9 @@
 		D7CECC45247C694500728639 /* MatchUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CECC41247C694500728639 /* MatchUser+CoreDataClass.swift */; };
 		D7CECC46247C694500728639 /* MatchUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CECC42247C694500728639 /* MatchUser+CoreDataProperties.swift */; };
 		D7CECC6B247C7FA100728639 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CECC6A247C7FA100728639 /* CoreDataManager.swift */; };
+		D7CECC6D247E0AB200728639 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CECC6C247E0AB200728639 /* Messages.swift */; };
+		D7CECC6F247E0AC000728639 /* MatchUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CECC6E247E0AC000728639 /* MatchUsers.swift */; };
+		D7CECC71247F5CE900728639 /* ChatLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CECC70247F5CE900728639 /* ChatLogViewController.swift */; };
 		D7D249EF2476056B00807B8C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D249EE2476056B00807B8C /* Extension.swift */; };
 		D7D24A11247784F100807B8C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D24A10247784F100807B8C /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +51,9 @@
 		D7CECC41247C694500728639 /* MatchUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchUser+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D7CECC42247C694500728639 /* MatchUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D7CECC6A247C7FA100728639 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		D7CECC6C247E0AB200728639 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		D7CECC6E247E0AC000728639 /* MatchUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchUsers.swift; sourceTree = "<group>"; };
+		D7CECC70247F5CE900728639 /* ChatLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogViewController.swift; sourceTree = "<group>"; };
 		D7D249EE2476056B00807B8C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		D7D24A10247784F100807B8C /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +80,8 @@
 		D73AA450247C568700734E90 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D7CECC6C247E0AB200728639 /* Messages.swift */,
+				D7CECC6E247E0AC000728639 /* MatchUsers.swift */,
 				D7CECC3F247C694500728639 /* Message+CoreDataClass.swift */,
 				D7CECC40247C694500728639 /* Message+CoreDataProperties.swift */,
 				D7CECC41247C694500728639 /* MatchUser+CoreDataClass.swift */,
@@ -123,6 +131,7 @@
 				D7D24A10247784F100807B8C /* SignupViewController.swift */,
 				D74B5E8D2475F8B80015F9D9 /* LoginViewController.swift */,
 				D73AA444247A01D200734E90 /* MessagesController.swift */,
+				D7CECC70247F5CE900728639 /* ChatLogViewController.swift */,
 				D73AA446247A117400734E90 /* MainTabBarController.swift */,
 			);
 			name = Controllers;
@@ -209,11 +218,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D73AA44C247C3B9200734E90 /* MessageViewCell.swift in Sources */,
+				D7CECC6D247E0AB200728639 /* Messages.swift in Sources */,
 				D7B4BB952478CF69004EE92D /* SignupScreen.swift in Sources */,
 				D74B5E8E2475F8B80015F9D9 /* LoginViewController.swift in Sources */,
 				D796FD3D2468D41B001E0C31 /* AppDelegate.swift in Sources */,
 				D7CECC6B247C7FA100728639 /* CoreDataManager.swift in Sources */,
 				D7CECC46247C694500728639 /* MatchUser+CoreDataProperties.swift in Sources */,
+				D7CECC6F247E0AC000728639 /* MatchUsers.swift in Sources */,
 				D7CECC44247C694500728639 /* Message+CoreDataProperties.swift in Sources */,
 				D7D24A11247784F100807B8C /* SignupViewController.swift in Sources */,
 				D796FD3F2468D41B001E0C31 /* SceneDelegate.swift in Sources */,
@@ -221,6 +232,7 @@
 				D73AA44A247A429A00734E90 /* APIRequest.swift in Sources */,
 				D7CECC43247C694500728639 /* Message+CoreDataClass.swift in Sources */,
 				D7D249EF2476056B00807B8C /* Extension.swift in Sources */,
+				D7CECC71247F5CE900728639 /* ChatLogViewController.swift in Sources */,
 				D73AA447247A117400734E90 /* MainTabBarController.swift in Sources */,
 				D7CECC45247C694500728639 /* MatchUser+CoreDataClass.swift in Sources */,
 				D73AA44F247C567C00734E90 /* Model.xcdatamodeld in Sources */,

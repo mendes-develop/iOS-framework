@@ -11,13 +11,14 @@ import CoreData
 
 extension CoreDataManager {
     
-    func createMessage(text: String, date: Date, user: MatchUser)-> Message? {
+    func createMessage(text: String, date: Date, user: MatchUser, isSender: Bool = false)-> Message? {
         let context = persintentContainer.viewContext
         
         let message = NSEntityDescription.insertNewObject(forEntityName: "Message", into: context) as? Message
         message?.text = text
         message?.date = date
         message?.user = user
+        message?.isSender = isSender
         
         do {
             try context.save()

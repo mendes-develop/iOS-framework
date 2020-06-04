@@ -24,6 +24,5 @@ class CoreDataManager {
     
 }
 
-//class MatchUserManager: CoreDataManager {
 
 

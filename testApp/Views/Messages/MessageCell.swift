@@ -11,6 +11,15 @@ import UIKit
 
 class MessageCell: UICollectionViewCell {
     
+    override var isHighlighted: Bool {
+        didSet{
+            self.backgroundColor = isHighlighted ? UIColor(red: 0, green: 134/255, blue: 249/255, alpha: 1) : UIColor.white
+            self.nameLabel.textColor = isHighlighted ? UIColor.white : UIColor.black
+            self.timeLabel.textColor = isHighlighted ? UIColor.white : UIColor.black
+            self.messageLabel.textColor = isHighlighted ? UIColor.white : UIColor.black
+        }
+    }
+    
     var message: Message? {
         didSet{
             nameLabel.text = message?.user?.name
@@ -20,7 +29,22 @@ class MessageCell: UICollectionViewCell {
             messageLabel.text = message?.text
             if let date = message?.date {
                 let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "h:mm a"
+                let elapsedTimeInSeconds = Date().timeIntervalSince(date)
+                let secondsInDay: TimeInterval = 60 * 60 * 24
+                
+                if elapsedTimeInSeconds > secondsInDay {
+                    dateFormatter.dateFormat = "MM/dd/yy"
+                } else if elapsedTimeInSeconds > 7 * secondsInDay {
+                    dateFormatter.dateFormat = "EEE"
+                } else {
+                    dateFormatter.dateFormat = "h:mm a"
+                }
+                
+                
+                
+                
+                
+                
                 timeLabel.text = dateFormatter.string(from: date)
             }
         }
@@ -101,16 +125,7 @@ class MessageCell: UICollectionViewCell {
         mainStack.anchor(top: nil, bottom: nil, leading: self.leadingAnchor, trailing: self.trailingAnchor, padding: .init(top: 0, left: 90, bottom: 0, right: 12), size: .init(width: 0, height: 40))
         mainStack.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
     
-        
 
-        
-//        profileImage.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|-12-[v0(68)]", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0":profileImage]))
-//        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:|-12-[v0(68)]", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0":profileImage]))
-//
-//        dividerLine.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|-82-[v0]", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0":dividerLine]))
-//        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(1)]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0":dividerLine]))
 
     }
     

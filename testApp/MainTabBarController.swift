@@ -14,7 +14,7 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         
         let layout = UICollectionViewFlowLayout()
-        let messagesListController = MessageViewController(collectionViewLayout: layout)
+        let messagesListController = MessagesViewController(collectionViewLayout: layout)
         let messagesNavigationController = UINavigationController(rootViewController: messagesListController)
         messagesNavigationController.tabBarItem.title = "Messages"
         messagesNavigationController.tabBarItem.image = UIImage(named: "chat-40")

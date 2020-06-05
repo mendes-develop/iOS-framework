@@ -46,8 +46,8 @@ class ChatLogViewController: UICollectionViewController, UICollectionViewDelegat
     }
     
     @objc func sendMessage(){
-        if let message =  chatView?.messageTextField.text, let user = matchUser, message != "" {
-            guard let message = CoreDataManager.shared.createMessage(text: "Protest?", date: Date().addingTimeInterval(-5 * 60), user: user, isSender: true) else { return }
+        if let text =  chatView?.messageTextField.text, let user = matchUser, text != "" {
+            guard let message = CoreDataManager.shared.createMessage(text: text, date: Date(), user: user, isSender: true) else { return }
             messages?.append(message)
             print(message)
             collectionView.reloadData()

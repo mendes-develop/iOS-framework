@@ -41,6 +41,7 @@ class ChatView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUp()
+        addTap()
     }
     
     
@@ -60,7 +61,16 @@ class ChatView: UIView {
     }
     
     
+    func addTap(){
+        let gesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(targetViewDidTapped))
+        gesture.numberOfTapsRequired = 1
+        self.isUserInteractionEnabled = true
+        self.addGestureRecognizer(gesture)
+    }
     
+    @objc func targetViewDidTapped(){
+        messageTextField.endEditing(true)
+    }
     
     
     

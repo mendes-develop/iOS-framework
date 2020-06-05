@@ -22,12 +22,15 @@ class ChatLogViewController: UICollectionViewController, UICollectionViewDelegat
         }
     }
     
-    
-    
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+        keyboardListener()
+        chatView?.sendButton.addTarget(self, action: #selector(sendMessage), for: .touchUpInside)
+    }
+    
+    func setup(){
         self.tabBarController?.tabBar.isHidden = true
         collectionView.backgroundColor = .white
         collectionView.register(ChatLogMessageCell.self, forCellWithReuseIdentifier: cellId)
@@ -35,15 +38,24 @@ class ChatLogViewController: UICollectionViewController, UICollectionViewDelegat
         self.chatView = mainView
         self.view.addSubview(chatView!)
         chatView!.anchor(top: view.topAnchor, bottom: view.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor)
-        
-        
+    }
+    
+    func keyboardListener(){
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardChange), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardChange), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-
+    @objc func sendMessage(){
+        if let message =  chatView?.messageTextField.text, let user = matchUser, message != "" {
+            guard let message = CoreDataManager.shared.createMessage(text: "Protest?", date: Date().addingTimeInterval(-5 * 60), user: user, isSender: true) else { return }
+            messages?.append(message)
+            print(message)
+            collectionView.reloadData()
+        }
+    }
     
     @objc func handleKeyboardChange(notification: NSNotification){
+
         if let userInfo = notification.userInfo {
             let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
             
@@ -66,10 +78,6 @@ class ChatLogViewController: UICollectionViewController, UICollectionViewDelegat
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return messages?.count ?? 0
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        chatView?.messageTextField.endEditing(true)
     }
     
     

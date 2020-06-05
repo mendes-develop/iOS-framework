@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D71304872489E55F00FA1134 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71304862489E55F00FA1134 /* ChatView.swift */; };
 		D73AA445247A01D200734E90 /* MessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73AA444247A01D200734E90 /* MessagesController.swift */; };
 		D73AA447247A117400734E90 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73AA446247A117400734E90 /* MainTabBarController.swift */; };
 		D73AA44A247A429A00734E90 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73AA449247A429A00734E90 /* APIRequest.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D71304862489E55F00FA1134 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		D73AA444247A01D200734E90 /* MessagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesController.swift; sourceTree = "<group>"; };
 		D73AA446247A117400734E90 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		D73AA449247A429A00734E90 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
@@ -84,8 +86,8 @@
 			children = (
 				D78C4FE82485B50D00142398 /* MatchUsers */,
 				D78C4FE72485B4F200142398 /* Messages */,
-				D73AA44D247C567C00734E90 /* Model.xcdatamodeld */,
 				D7CECC6A247C7FA100728639 /* CoreDataManager.swift */,
+				D73AA44D247C567C00734E90 /* Model.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,6 +145,7 @@
 			children = (
 				D73AA44B247C3B9200734E90 /* MessageCell.swift */,
 				D78C4FED2485B60800142398 /* ChatCell.swift */,
+				D71304862489E55F00FA1134 /* ChatView.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				D7CECC6D247E0AB200728639 /* Messages.swift in Sources */,
 				D7B4BB952478CF69004EE92D /* SignupScreen.swift in Sources */,
 				D74B5E8E2475F8B80015F9D9 /* LoginViewController.swift in Sources */,
+				D71304872489E55F00FA1134 /* ChatView.swift in Sources */,
 				D796FD3D2468D41B001E0C31 /* AppDelegate.swift in Sources */,
 				D7CECC6B247C7FA100728639 /* CoreDataManager.swift in Sources */,
 				D78C4FEE2485B60800142398 /* ChatCell.swift in Sources */,

@@ -22,6 +22,7 @@ class SignupViewController: UIViewController {
         let mainView = SignupScreen(frame: self.view.frame)
         self.signupScreen = mainView
         self.view.addSubview(signupScreen)
+        signupScreen.anchor(top: view.topAnchor, bottom: view.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor)
         signupScreen.signupButton.addTarget(self,action: #selector(self.handleSignup), for: .touchUpInside)
         signupScreen.loginLink.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
     }

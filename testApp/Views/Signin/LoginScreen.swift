@@ -60,16 +60,9 @@ class LoginScreen: UIView {
         emailField.style(placeholder: "Email")
         passwordField.style(placeholder: "Password")
         loginButton.style(title: "Login")
-//        addConstraints()
     }
     
-//    func addConstraints(){
-//        loginButton.anchor(top: nil, bottom: mainStackView.bottomAnchor, leading: mainStackView.leadingAnchor, trailing: mainStackView.trailingAnchor)
-//        passwordField.anchor(top: nil, bottom: loginButton.topAnchor, leading: loginButton.leadingAnchor, trailing: loginButton.trailingAnchor)
-//        emailField.anchor(top: nil, bottom: passwordField.topAnchor, leading: passwordField.leadingAnchor, trailing: passwordField.trailingAnchor)
-//        passwordField.setAchor(width: 0, height: 50)
-//        emailField.anchorSize(to: passwordField)
-//    }
+
     
     func prepareBottomStack(){
         bottomStackView.translatesAutoresizingMaskIntoConstraints = false

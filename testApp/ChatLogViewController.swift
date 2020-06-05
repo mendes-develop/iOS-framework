@@ -11,8 +11,8 @@ import UIKit
 class ChatLogViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     private let cellId = "cellId"
-    
     var messages: [Message]?
+    var chatView: ChatView?
     
     var matchUser: MatchUser? {
         didSet{
@@ -22,66 +22,33 @@ class ChatLogViewController: UICollectionViewController, UICollectionViewDelegat
         }
     }
     
-    let keyboardContainer: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        return view
-    }()
     
-    let messageTextField: UITextView = {
-        let textField = UITextView()
-        textField.font = UIFont.systemFont(ofSize: 16)
-        return textField
-    }()
     
-    let sendButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Send", for: .normal)
-        button.setTitleColor(.blue, for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        return button
-    }()
-    
-    let inputBorder: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(white: 0.5, alpha: 0.5)
-        return view
-    }()
-    
-    var bottomConstraint: NSLayoutConstraint?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = true
         collectionView.backgroundColor = .white
         collectionView.register(ChatLogMessageCell.self, forCellWithReuseIdentifier: cellId)
-        setUp()
+        let mainView = ChatView(frame: self.view.frame)
+        self.chatView = mainView
+        self.view.addSubview(chatView!)
+        chatView!.anchor(top: view.topAnchor, bottom: view.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor)
+        
         
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardChange), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardChange), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    func setUp(){
-        self.view.addSubview(keyboardContainer)
-        keyboardContainer.anchor(top: nil, bottom: nil, leading: view.leadingAnchor, trailing: view.trailingAnchor, size: .init(width: 0, height: 48))
-        bottomConstraint = NSLayoutConstraint(item: keyboardContainer, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 0)
-        view.addConstraint(bottomConstraint!)
-        keyboardContainer.addSubview(inputBorder)
-        keyboardContainer.addSubview(messageTextField)
-        keyboardContainer.addSubview(sendButton)
-        
-        inputBorder.anchor(top: keyboardContainer.topAnchor, bottom: nil, leading: keyboardContainer.leadingAnchor, trailing: keyboardContainer.trailingAnchor, size: .init(width: 0, height: 0.5))
-        
-        sendButton.anchor(top: inputBorder.topAnchor, bottom: keyboardContainer.bottomAnchor, leading: nil, trailing: keyboardContainer.trailingAnchor, size: .init(width: 60, height: 0))
-        messageTextField.anchor(top: inputBorder.bottomAnchor, bottom: keyboardContainer.bottomAnchor, leading: keyboardContainer.leadingAnchor, trailing: sendButton.leadingAnchor, padding: .init(top: 0, left: 8, bottom: 0, right: 0))
-    }
+
     
     @objc func handleKeyboardChange(notification: NSNotification){
         if let userInfo = notification.userInfo {
             let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
             
             let isKeyboardShowing = notification.name == UIResponder.keyboardWillShowNotification
-            bottomConstraint?.constant = isKeyboardShowing ? -keyboardFrame.height : 0
+            chatView?.bottomConstraint?.constant = isKeyboardShowing ? -keyboardFrame.height : 0
             
             UIView.animate(withDuration: 0, delay: 0, options: UIView.AnimationOptions.curveEaseOut, animations: {
                 self.view.layoutIfNeeded()
@@ -102,7 +69,7 @@ class ChatLogViewController: UICollectionViewController, UICollectionViewDelegat
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        messageTextField.endEditing(true)
+        chatView?.messageTextField.endEditing(true)
     }
     
     

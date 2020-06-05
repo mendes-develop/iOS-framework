@@ -22,6 +22,7 @@ class LoginViewController: UIViewController {
         let mainView = LoginScreen(frame: self.view.frame)
         self.loginScreen = mainView
         self.view.addSubview(loginScreen)
+        loginScreen.anchor(top: view.topAnchor, bottom: view.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor)
         loginScreen.loginButton.addTarget(self, action: #selector(self.handleLogin), for: .touchUpInside)
         loginScreen.signupButton.addTarget(self, action: #selector(self.handleSignup), for: .touchUpInside)
     }

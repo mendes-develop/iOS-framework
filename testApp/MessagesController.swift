@@ -88,6 +88,16 @@ extension MessagesViewController {
         guard let user2 = CoreDataManager.shared.createMatchUser(name: "Michelle Nguyen", profileImage: "michelle") else { return }
         guard CoreDataManager.shared.createMessage(text: "Can I wer light jeans during winter time?", date: Date().addingTimeInterval(-4 * 60), user: user2) != nil else { return }
         guard CoreDataManager.shared.createMessage(text: "What's my man. How are you doing today? Isn't a beutiful day today?", date: Date().addingTimeInterval(-5 * 60), user: user2) != nil else { return }
+        guard CoreDataManager.shared.createMessage(text: "What's my man. How are you doing today? Isn't a beutiful day today?", date: Date().addingTimeInterval(-5 * 60), user: user2) != nil else { return }
+        guard CoreDataManager.shared.createMessage(text: "What's my man. How are you doing today? Isn't a beutiful day today?", date: Date().addingTimeInterval(-5 * 60), user: user2) != nil else { return }
+        guard CoreDataManager.shared.createMessage(text: "What's my man. How are you doing today? Isn't a beutiful day today?", date: Date().addingTimeInterval(-5 * 60), user: user2) != nil else { return }
+        guard CoreDataManager.shared.createMessage(text: "What's my man. How are you doing today? Isn't a beutiful day today?", date: Date().addingTimeInterval(-5 * 60), user: user2) != nil else { return }
+        guard CoreDataManager.shared.createMessage(text: "What's my man. How are you doing today? Isn't a beutiful day today?", date: Date().addingTimeInterval(-5 * 60), user: user2) != nil else { return }
+        guard CoreDataManager.shared.createMessage(text: "What's my man. How are you doing today? Isn't a beutiful day today?", date: Date().addingTimeInterval(-5 * 60), user: user2) != nil else { return }
+        guard CoreDataManager.shared.createMessage(text: "What's my man. How are you doing today? Isn't a beutiful day today?", date: Date().addingTimeInterval(-5 * 60), user: user2) != nil else { return }
+        guard CoreDataManager.shared.createMessage(text: "What's my man. How are you doing today? Isn't a beutiful day today?", date: Date().addingTimeInterval(-5 * 60), user: user2) != nil else { return }
+        guard CoreDataManager.shared.createMessage(text: "What's my man. How are you doing today? Isn't a beutiful day today?", date: Date().addingTimeInterval(-5 * 60), user: user2) != nil else { return }
+        
         guard CoreDataManager.shared.createMessage(text: "Protest?", date: Date().addingTimeInterval(-5 * 60), user: user2, isSender: true) != nil else { return }
         
         guard let user1 = CoreDataManager.shared.createMatchUser(name: "Alex Mendes", profileImage: "alex") else { return }

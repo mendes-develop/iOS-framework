@@ -39,12 +39,6 @@ class MessageCell: UICollectionViewCell {
                 } else {
                     dateFormatter.dateFormat = "h:mm a"
                 }
-                
-                
-                
-                
-                
-                
                 timeLabel.text = dateFormatter.string(from: date)
             }
         }
@@ -124,9 +118,6 @@ class MessageCell: UICollectionViewCell {
         
         mainStack.anchor(top: nil, bottom: nil, leading: self.leadingAnchor, trailing: self.trailingAnchor, padding: .init(top: 0, left: 90, bottom: 0, right: 12), size: .init(width: 0, height: 40))
         mainStack.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-    
-
-
     }
     
     

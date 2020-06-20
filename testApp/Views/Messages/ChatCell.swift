@@ -9,7 +9,6 @@
 import UIKit
 
 class ChatLogMessageCell: UICollectionViewCell {
-    
     let profileImageView: UIImageView = {
        let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -48,17 +47,13 @@ class ChatLogMessageCell: UICollectionViewCell {
         setup()
     }
     
-
     func setup(){
-        self.addSubview(bubbleView)
-        self.addSubview(messageTextView)
-        self.addSubview(profileImageView)
+        [bubbleView, messageTextView, profileImageView].forEach { addSubview($0) }
         bubbleView.addSubview(bubbleImage)
         profileImageView.anchor(top: nil, bottom: self.bottomAnchor, leading: self.leadingAnchor, trailing: nil,padding: .init(top: 0, left: 8, bottom: 0, right: 0), size: .init(width: 30, height: 30))
         bubbleImage.anchor(top: bubbleView.topAnchor, bottom: bubbleView.bottomAnchor, leading: bubbleView.leadingAnchor, trailing: bubbleView.trailingAnchor)
         profileImageView.backgroundColor = .red
     }
-    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

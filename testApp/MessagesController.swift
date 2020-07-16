@@ -50,12 +50,8 @@ class MessagesViewController: UICollectionViewController, UICollectionViewDelega
         chatController.matchUser = messagesPreview?[indexPath.item].user
         navigationController?.pushViewController(chatController, animated: true)
     }
-    
-        
 
 }
-
-
 
 extension MessagesViewController {
     func setUpData(){

@@ -9,9 +9,16 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    
-    var loginScreen: LoginScreen!
+    var loginScreen : LoginScreen! {return self.view as? LoginScreen}
+    unowned var loginButton: UIButton! { return loginScreen.loginButton }
+    unowned var signupButton: UIButton! { return loginScreen.signupButton }
 
+    override func loadView() {
+        if let keyWindow = UIApplication.shared.windows.first(where: { $0.isKeyWindow }){
+            view = LoginScreen(frame: keyWindow.frame)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
@@ -19,11 +26,8 @@ class LoginViewController: UIViewController {
     }
     
     func setup(){
-        let mainView = LoginScreen(frame: self.view.frame)
-        self.loginScreen = mainView
-        self.view.addSubview(loginScreen)
-        loginScreen.loginButton.addTarget(self, action: #selector(self.handleLogin), for: .touchUpInside)
-        loginScreen.signupButton.addTarget(self, action: #selector(self.handleSignup), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(self.handleLogin), for: .touchUpInside)
+        signupButton.addTarget(self, action: #selector(self.handleSignup), for: .touchUpInside)
     }
     
     @objc func handleLogin(){

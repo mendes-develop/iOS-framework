@@ -30,9 +30,6 @@ class LoginScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-
-    
-
     func styleText(label: UILabel, text: String){
         label.text = text
         label.textColor = .black

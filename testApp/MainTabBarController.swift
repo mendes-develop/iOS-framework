@@ -19,9 +19,15 @@ class MainTabBarController: UITabBarController {
         messagesNavigationController.tabBarItem.title = "Messages"
         messagesNavigationController.tabBarItem.image = UIImage(named: "chat-40")
         
-        viewControllers  = [messagesNavigationController]
+        viewControllers  = [messagesNavigationController, addSettingsController()]
     }
     
-
-
+    func addSettingsController() -> UIViewController {
+        let layout = UICollectionViewFlowLayout()
+        let settingController = MainPageSettingCollectionViewController(collectionViewLayout: layout)
+        let settingNavController = UINavigationController(rootViewController: settingController)
+        settingController.tabBarItem.image = #imageLiteral(resourceName: "icons8-settings-24")
+        settingController.tabBarItem.title = "Settings"
+        return settingNavController;
+    }
 }

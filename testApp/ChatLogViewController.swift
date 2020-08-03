@@ -158,6 +158,3 @@ class ChatLogViewController: UICollectionViewController, UICollectionViewDelegat
 extension ChatLogMessageCell {
     
 }
-
-
-

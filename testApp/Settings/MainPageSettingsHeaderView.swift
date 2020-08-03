@@ -14,9 +14,10 @@ class MainPageSettingsHeaderView: UICollectionReusableView {
     
     lazy var profileImage: UIImageView = { [unowned self] in
         let imageView = UIImageView()
-        imageView.setAchor(width: 200, height: 200);
+        let width = self.frame.height - 150
+        imageView.setAchor(width: width, height: width);
         imageView.image = #imageLiteral(resourceName: "profileImage")
-        imageView.layer.cornerRadius = 100
+        imageView.layer.cornerRadius = width/2
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         imageView.backgroundColor = .white

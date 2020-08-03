@@ -33,6 +33,7 @@
 		D7FE76A924C1364700B1F9AE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE76A824C1364700B1F9AE /* ProfileViewController.swift */; };
 		D7FE76AC24C1493100B1F9AE /* ProfileHeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE76AB24C1493100B1F9AE /* ProfileHeaderViewCell.swift */; };
 		D7FE76AE24CA9E2300B1F9AE /* ProfilesSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE76AD24CA9E2300B1F9AE /* ProfilesSections.swift */; };
+		D7FE76B024CD2EC800B1F9AE /* ProfileSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE76AF24CD2EC800B1F9AE /* ProfileSwitch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		D7FE76A824C1364700B1F9AE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D7FE76AB24C1493100B1F9AE /* ProfileHeaderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewCell.swift; sourceTree = "<group>"; };
 		D7FE76AD24CA9E2300B1F9AE /* ProfilesSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesSections.swift; sourceTree = "<group>"; };
+		D7FE76AF24CD2EC800B1F9AE /* ProfileSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSwitch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				D7FE76AB24C1493100B1F9AE /* ProfileHeaderViewCell.swift */,
+				D7FE76AF24CD2EC800B1F9AE /* ProfileSwitch.swift */,
 				D7FE76AD24CA9E2300B1F9AE /* ProfilesSections.swift */,
 			);
 			path = Settings;
@@ -312,6 +315,7 @@
 				D7CECC43247C694500728639 /* Message+CoreDataClass.swift in Sources */,
 				D7D249EF2476056B00807B8C /* Extension.swift in Sources */,
 				D7CECC71247F5CE900728639 /* ChatLogViewController.swift in Sources */,
+				D7FE76B024CD2EC800B1F9AE /* ProfileSwitch.swift in Sources */,
 				D73AA447247A117400734E90 /* MainTabBarController.swift in Sources */,
 				D7CECC45247C694500728639 /* MatchUser+CoreDataClass.swift in Sources */,
 				D7FE76AE24CA9E2300B1F9AE /* ProfilesSections.swift in Sources */,

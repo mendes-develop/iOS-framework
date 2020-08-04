@@ -26,6 +26,12 @@ class MainPageSettingCollectionViewController: UICollectionViewController, UICol
         setupNavigationBar()
         registerCollectionViews()
     }
+
+    func ProfileController()-> UIViewController{
+        let layout = UICollectionViewFlowLayout()
+        let settingsController = ProfileViewController(collectionViewLayout: layout)
+        return settingsController
+    }
     
     func setupNavigationBar()  {
         let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
@@ -80,6 +86,6 @@ class MainPageSettingCollectionViewController: UICollectionViewController, UICol
         let cell = collectionView.cellForItem(at: indexPath) as! SettingCollectionViewCell
         guard let key = cell.label.text, let vc = viewControllers[key] else { return }
         vc.view.backgroundColor = .blue
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(self.ProfileController(), animated: true)
     }
 }

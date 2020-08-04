@@ -33,6 +33,10 @@
 		D7CECC71247F5CE900728639 /* ChatLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CECC70247F5CE900728639 /* ChatLogViewController.swift */; };
 		D7D249EF2476056B00807B8C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D249EE2476056B00807B8C /* Extension.swift */; };
 		D7D24A11247784F100807B8C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D24A10247784F100807B8C /* SignupViewController.swift */; };
+		D7FE76A924C1364700B1F9AE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE76A824C1364700B1F9AE /* ProfileViewController.swift */; };
+		D7FE76AC24C1493100B1F9AE /* ProfileHeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE76AB24C1493100B1F9AE /* ProfileHeaderViewCell.swift */; };
+		D7FE76AE24CA9E2300B1F9AE /* ProfilesSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE76AD24CA9E2300B1F9AE /* ProfilesSections.swift */; };
+		D7FE76B024CD2EC800B1F9AE /* ProfileSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE76AF24CD2EC800B1F9AE /* ProfileSwitch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +68,10 @@
 		D7CECC70247F5CE900728639 /* ChatLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogViewController.swift; sourceTree = "<group>"; };
 		D7D249EE2476056B00807B8C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		D7D24A10247784F100807B8C /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		D7FE76A824C1364700B1F9AE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D7FE76AB24C1493100B1F9AE /* ProfileHeaderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewCell.swift; sourceTree = "<group>"; };
+		D7FE76AD24CA9E2300B1F9AE /* ProfilesSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesSections.swift; sourceTree = "<group>"; };
+		D7FE76AF24CD2EC800B1F9AE /* ProfileSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSwitch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +148,6 @@
 			children = (
 				D73AA444247A01D200734E90 /* MessagesController.swift */,
 				D7CECC70247F5CE900728639 /* ChatLogViewController.swift */,
-				D73AA446247A117400734E90 /* MainTabBarController.swift */,
 			);
 			name = Messages;
 			sourceTree = "<group>";
@@ -200,6 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				CA80785524C10DB5003976D7 /* Settings */,
+				D73AA446247A117400734E90 /* MainTabBarController.swift */,
+				D7FE76A724C1360D00B1F9AE /* Settings */,
 				D78C4FEA2485B56100142398 /* Messages */,
 				D78C4FE92485B53F00142398 /* Signin */,
 			);
@@ -209,10 +218,29 @@
 		D7B4BB9124789608004EE92D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D7FE76AA24C148FD00B1F9AE /* Settings */,
 				D78C4FEC2485B5BC00142398 /* Messages */,
 				D78C4FEB2485B59400142398 /* Signin */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D7FE76A724C1360D00B1F9AE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D7FE76A824C1364700B1F9AE /* ProfileViewController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		D7FE76AA24C148FD00B1F9AE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D7FE76AB24C1493100B1F9AE /* ProfileHeaderViewCell.swift */,
+				D7FE76AF24CD2EC800B1F9AE /* ProfileSwitch.swift */,
+				D7FE76AD24CA9E2300B1F9AE /* ProfilesSections.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,12 +314,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA80785724C10DE9003976D7 /* MainPageSettingsHeaderView.swift in Sources */,
+				D7FE76AC24C1493100B1F9AE /* ProfileHeaderViewCell.swift in Sources */,
 				D73AA44C247C3B9200734E90 /* MessageCell.swift in Sources */,
 				D7CECC6D247E0AB200728639 /* Messages.swift in Sources */,
 				D7B4BB952478CF69004EE92D /* SignupScreen.swift in Sources */,
 				D74B5E8E2475F8B80015F9D9 /* LoginViewController.swift in Sources */,
 				D796FD3D2468D41B001E0C31 /* AppDelegate.swift in Sources */,
 				D7CECC6B247C7FA100728639 /* CoreDataManager.swift in Sources */,
+				D7FE76A924C1364700B1F9AE /* ProfileViewController.swift in Sources */,
 				D78C4FEE2485B60800142398 /* ChatCell.swift in Sources */,
 				D7CECC46247C694500728639 /* MatchUser+CoreDataProperties.swift in Sources */,
 				CA80785924C10F8D003976D7 /* MainPageSettingCollectionViewController.swift in Sources */,
@@ -305,8 +335,10 @@
 				D7D249EF2476056B00807B8C /* Extension.swift in Sources */,
 				D7CECC71247F5CE900728639 /* ChatLogViewController.swift in Sources */,
 				CA6121E124D76E4E00042D20 /* SettingCollectionViewCell.swift in Sources */,
+				D7FE76B024CD2EC800B1F9AE /* ProfileSwitch.swift in Sources */,
 				D73AA447247A117400734E90 /* MainTabBarController.swift in Sources */,
 				D7CECC45247C694500728639 /* MatchUser+CoreDataClass.swift in Sources */,
+				D7FE76AE24CA9E2300B1F9AE /* ProfilesSections.swift in Sources */,
 				D73AA44F247C567C00734E90 /* Model.xcdatamodeld in Sources */,
 				D7B4BB932478964F004EE92D /* LoginScreen.swift in Sources */,
 			);
@@ -447,6 +479,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X7GF72UU2P;
 				INFOPLIST_FILE = testApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +487,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.AlexMendes.testApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -465,6 +498,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X7GF72UU2P;
 				INFOPLIST_FILE = testApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -472,7 +506,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.AlexMendes.testApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

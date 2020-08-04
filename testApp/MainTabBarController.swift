@@ -12,14 +12,16 @@ class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        viewControllers  = [addSettingsController(), addSettingsController()]
+    }
+
+    func addMessagesController() -> UIViewController {
         let layout = UICollectionViewFlowLayout()
-        let messagesListController = MessagesViewController(collectionViewLayout: layout)
-        let messagesNavigationController = UINavigationController(rootViewController: messagesListController)
-        messagesNavigationController.tabBarItem.title = "Messages"
-        messagesNavigationController.tabBarItem.image = UIImage(named: "chat-40")
-        
-        viewControllers  = [messagesNavigationController, addSettingsController()]
+        let messagesController = MessagesViewController(collectionViewLayout: layout)
+        let messagesNavController = UINavigationController(rootViewController: messagesListController)
+        messagesNavController.tabBarItem.title = "Messages"
+        messagesNavController.tabBarItem.image = UIImage(named: "chat-40")
+        return messagesListController
     }
     
     func addSettingsController() -> UIViewController {

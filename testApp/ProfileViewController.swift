@@ -28,16 +28,21 @@ fileprivate let allSections = ProfileSection.allCases
 
 class ProfileViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UIPickerViewDelegate {
         
-    let personalInfo = PersonalIfo(aboutMe: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", name: "Peter Rojas", gender: "Male", sexualOrientation: "Heterossexual", interests: ["Theater", "Music", "Fitness", "Tech"], myLocation: "Upper East Side, NY", age: 28, showAge: true, showLocation: true)
+    let personalInfo = PersonalIfo(aboutMe: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", name: "Peter Rojas", gender: "Male", sexualOrientation: "Heterossexual", interests: ["Theater", "Music", "Fitness", "Tech"], myLocation: "Upper East Side, NY", age: 28, showAge: true, showLocation: false)
 
   override func viewDidLoad() {
     super.viewDidLoad()
     registerCollectionViews()
     setup()
   }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        tabBarController?.tabBar.isHidden = false
+    }
 
     func setup() {
-        self.tabBarController?.tabBar.isHidden = true
+        tabBarController?.tabBar.isHidden = true
         navigationItem.title = "Profile"
         navigationController?.navigationBar.prefersLargeTitles = true
         collectionView.backgroundColor = .white

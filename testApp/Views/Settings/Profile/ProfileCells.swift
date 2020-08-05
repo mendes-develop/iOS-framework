@@ -9,10 +9,12 @@
 import UIKit
 
 class ProfileSwitch: UICollectionViewCell {
+    let lightGreen = UIColor(red: 1 / 255.0, green: 111 / 255.0, blue: 73 / 255.0, alpha: 1)
+    
     lazy var switchControl: UISwitch = {
        let switchControl = UISwitch()
         switchControl.isOn = false
-        switchControl.onTintColor = .blue
+        switchControl.onTintColor = self.lightGreen
         switchControl.addTarget(self, action: #selector(handleSwitch), for: .valueChanged)
         return switchControl
     }()

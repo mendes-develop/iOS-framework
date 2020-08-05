@@ -14,9 +14,9 @@ class MainPageSettingCollectionViewController: UICollectionViewController, UICol
     let darkGreen = CGColor.init(srgbRed: 1 / 255.0, green: 111 / 255.0, blue: 73 / 255.0, alpha: 1)
     let lightGreen = CGColor.init(srgbRed: 205 / 255.0, green: 232 / 255.0, blue: 215 / 255.0, alpha: 1)
 
-    let cellLabelTexts = ["Edit Info", "Preferences", "Account"]
+    let cellLabelTexts = ["Profile", "Preferences", "Account"]
     
-    let viewControllers = ["Edit Info": UIViewController(),
+    let viewControllers = ["Profile": UIViewController(),
                            "Preferences": UIViewController(),
                            "Account": UIViewController()]
     

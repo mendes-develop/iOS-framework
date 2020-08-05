@@ -17,25 +17,25 @@ class ProfileHeaderViewCell: UICollectionReusableView {
         setup()
     }
     
+    func cardView(name: String) -> UIImageView {
+        let view = UIImageView()
+        view.image = UIImage(named: name)
+        view.contentMode = .scaleAspectFill
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 10
+        return view
+    }
+    
+    func stackView(isVertical: Bool) -> UIStackView {
+         let stack = UIStackView()
+         stack.axis = isVertical ? .vertical : .horizontal
+         stack.alignment = .fill
+         stack.spacing = 16
+         stack.distribution = .fillEqually
+        return stack
+    }
+    
     func setup(){
-        
-        func cardView(name: String) -> UIImageView {
-            let view = UIImageView()
-            view.image = UIImage(named: name)
-            view.contentMode = .scaleAspectFill
-            view.clipsToBounds = true
-            view.layer.cornerRadius = 10
-            return view
-        }
-        
-        func stackView(isVertical: Bool) -> UIStackView {
-             let stack = UIStackView()
-             stack.axis = isVertical ? .vertical : .horizontal
-             stack.alignment = .fill
-             stack.spacing = 16
-             stack.distribution = .fillEqually
-            return stack
-        }
         
         let redView = cardView(name: "dan")
         let greenView = cardView(name: "steve")
@@ -57,14 +57,8 @@ class ProfileHeaderViewCell: UICollectionReusableView {
         horizontalStack.anchor(top: blueView.topAnchor, bottom: blueView.bottomAnchor, leading: self.leadingAnchor, trailing: blueView.leadingAnchor,padding:  .init(top: 0, left: 16, bottom: 0, right: 16))
         magentaView.anchor(top: self.topAnchor, bottom: horizontalStack.topAnchor, leading: self.leadingAnchor, trailing: verticalStack.leadingAnchor,padding:  .init(top: 16, left: 16, bottom: 16, right: 16))
 
-        
         [purpleView, grayView].forEach{ horizontalStack.addArrangedSubview($0)}
-
-//        purpleView.anchor(top: horizontalStack.topAnchor, bottom: horizontalStack.bottomAnchor, leading: horizontalStack.leadingAnchor, trailing: nil, size: .init(width: 100, height: .zero))
-//        grayView.anchor(top: horizontalStack.topAnchor, bottom: horizontalStack.bottomAnchor, leading: nil, trailing: horizontalStack.trailingAnchor, size: .init(width: 100, height: .zero))
-//
-        
-        
+         
     }
     
     required init?(coder: NSCoder) {
@@ -83,16 +77,17 @@ class SectionHeader: UICollectionReusableView {
  }()
 
 override init(frame: CGRect) {
-     super.init(frame: frame)
+    super.init(frame: frame)
+    backgroundColor = .systemGray6
+    setup()
 
-     addSubview(label)
-
-     label.translatesAutoresizingMaskIntoConstraints = false
-    label.anchorSize(to: self)
-//     label.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-     label.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
-//     label.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
 }
+    func setup(){
+        addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.anchorSize(to: self)
+        label.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
+    }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
